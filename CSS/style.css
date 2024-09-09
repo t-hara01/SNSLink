@@ -31,7 +31,9 @@ a {
 ul {
   width: 300px;
   margin: 0 auto;
+  padding-left: 0;
 }
 li {
   margin-bottom: 20px;
+  list-style:none
 }
