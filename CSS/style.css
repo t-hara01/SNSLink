@@ -1,10 +1,13 @@
 @charset "UTF-8";
 
+/* 共通部分 */
 body {
   background-image: url(../Images/bg.png);
   font-family: 'Verdana','Hiragino Sans','Meiryo',sans-serif;
   text-align : center;
 }
+
+/* スマホ用CSS */
 h1 {
   font-size: 18px;
   border: none;
@@ -15,13 +18,16 @@ h1 {
   width: 300px;
   text-align: center;
 }
+
 p,ul {
   text-align: center;
   margin-bottom: 20px;
 }
+
 img {
   border-radius: 50%;
 }
+
 a {
   background-color: #008c1e;
   display: block;
@@ -41,7 +47,7 @@ li {
 }
 
 .box {
-  width: 500px;
+  width: 350px;
   height: 500px;
   border: none;
   background-color: rgba(255,255,255,0.6);
@@ -49,4 +55,58 @@ li {
   padding: 20px 20px 20px 20px;
   margin: auto;
   border-radius: 5px 5px 5px 5px;
+}
+
+/* PC用CSS */
+@media all and (min-width: 1024px) {
+  h1 {
+    font-size: 18px;
+    border: none;
+    background-color: rgb(162, 231, 94);
+    border-radius: 20px;
+    padding: 6px 0;
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+  }
+
+  p,ul {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+
+  a {
+    background-color: #008c1e;
+    display: block;
+    padding: 20px 0;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  ul {
+    width: 300px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    list-style:none
+  }
+  
+  .box {
+    width: 500px;
+    height: 500px;
+    border: none;
+    background-color: rgba(255,255,255,0.6);
+    text-align : center;
+    padding: 20px 20px 20px 20px;
+    margin: auto;
+    border-radius: 5px 5px 5px 5px;
+  }
 }
