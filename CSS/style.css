@@ -38,7 +38,7 @@ footer {
 
 h1 {
   font-size: 15px;
-  margin: 0px auto 20px;
+  margin: 0px auto 10px;
   width: 300px;
   text-align: center;
 }
@@ -82,7 +82,7 @@ li {
 
 .box {
   width: 85%;
-  height: 520px;
+  height: 500px;
   border: none;
   background-color: rgba(255,255,255,0.6);
   text-align : center;
