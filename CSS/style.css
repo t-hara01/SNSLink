@@ -2,19 +2,132 @@
 
 /* 共通部分 */
 body {
-  background-image: url(../Images/bg.png);
-  font-family: 'Verdana','Hiragino Sans','Meiryo',sans-serif;
+  /* background-image: url(../Images/bg.png); */
+  background-color: #23A4AA;
+  background-image: url(../Images/noise_pc.webp);
+  /* font-family: 'Verdana','Hiragino Sans','Meiryo',sans-serif; */
+  font-family: 'Montserrat', 'Noto Sans JP', 'Meiryo', sans-serif;
   text-align : center;
 }
 
+/* 疑似要素でオーバーレイ*/
+/*CSSの疑似要素を使って、白や背景色の半透明レイヤーを重ねる方法*/
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #23A4AA;
+  opacity: 0.77; /* 透明度を調整 */
+  pointer-events: none;
+  z-index: -1;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  line-height: 40px;
+}
+
 /* スマホ用CSS */
-h1 {
-  font-size: 18px;
+  h1 {
+    font-size: 15px;
+    margin: 0px auto 20px;
+    width: 300px;
+    text-align: center;
+  }
+
+p,ul {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+a {
+  background-color: #FDB945;
+  display: block;
+  padding: 20px 0;
+  border-radius: 4px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 15px;
+}
+ul {
+  width: 70%;
+  margin: 0 auto;
+  padding-left: 0;
+}
+li {
+  margin-bottom: 20px;
+  list-style:none;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ul-logo {
+  width: 18px;
+  height: 18px;
+}
+
+.profile-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.box {
+  width: 85%;
+  height: 600px;
   border: none;
-  background-color: rgb(162, 231, 94);
-  border-radius: 20px;
-  padding: 6px 0;
-  margin: 20px auto;
+  background-color: rgba(255,255,255,0.6);
+  text-align : center;
+  padding: 10px 10px 10px 10px;
+  margin: 10px auto 10px;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 10px 10px 10px;
+}
+
+.fukidasi {
+  position: relative;
+  width: 300px;
+  margin: 0 auto 10px auto;
+  padding: 10px 0px 0px 0px;
+}
+
+.fukidasi img {
+  width: 100%;
+  display: block;
+  animation: fukidasi-pulse 2s infinite;
+}
+
+.hukidasi-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  text-align: center;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.5;
+  pointer-events: none;
+}
+
+/* 吹き出しアニメーション */
+@keyframes fukidasi-pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* PC用CSS */
+@media all and (min-width: 1024px) {
+h1 {
+  font-size: 20px;
+  margin: 0px auto 20px;
   width: 300px;
   text-align: center;
 }
@@ -24,89 +137,84 @@ p,ul {
   margin-bottom: 20px;
 }
 
-img {
-  border-radius: 50%;
-}
-
 a {
-  background-color: #008c1e;
+  background-color: #FDB945;
   display: block;
   padding: 20px 0;
   border-radius: 4px;
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
+  font-size: 20px;
 }
+
 ul {
-  width: 300px;
+  width: 50%;
   margin: 0 auto;
   padding-left: 0;
 }
+  
 li {
   margin-bottom: 20px;
-  list-style:none
+  list-style:none;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+  
+.ul-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .box {
-  width: 350px;
-  height: 500px;
+  /* width: 500px;
+  height: 500px; */
+  width: 70%;
+  height: 650px;
   border: none;
   background-color: rgba(255,255,255,0.6);
   text-align : center;
   padding: 20px 20px 20px 20px;
-  margin: auto;
+  margin: 20px auto 20px;
   border-radius: 5px 5px 5px 5px;
+  box-shadow: 10px 10px 10px;
 }
 
-/* PC用CSS */
-@media all and (min-width: 1024px) {
-  h1 {
-    font-size: 18px;
-    border: none;
-    background-color: rgb(162, 231, 94);
-    border-radius: 20px;
-    padding: 6px 0;
-    margin: 20px auto;
-    width: 300px;
-    text-align: center;
-  }
+.fukidasi {
+  position: relative;
+  width: 400px;
+  margin: 0 auto 10px auto;
+  padding: 10px 0px 0px 0px;
+}
 
-  p,ul {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+.fukidasi img {
+  width: 100%;
+  display: block;
+  animation: fukidasi-pulse 2s infinite;
+}
 
-  img {
-    border-radius: 50%;
-  }
+.hukidasi-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  text-align: center;
+  color: #333;
+  font-size: 20px;
+  line-height: 1.5;
+  pointer-events: none;
+}
 
-  a {
-    background-color: #008c1e;
-    display: block;
-    padding: 20px 0;
-    border-radius: 4px;
-    color: #ffffff;
-    font-weight: bold;
-  }
+/* 吹き出しアニメーション */
+@keyframes fukidasi-pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
 
-  ul {
-    width: 300px;
-    margin: 0 auto;
-    padding-left: 0;
-  }
-  
-  li {
-    margin-bottom: 20px;
-    list-style:none
-  }
-  
-  .box {
-    width: 500px;
-    height: 500px;
-    border: none;
-    background-color: rgba(255,255,255,0.6);
-    text-align : center;
-    padding: 20px 20px 20px 20px;
-    margin: auto;
-    border-radius: 5px 5px 5px 5px;
-  }
 }
