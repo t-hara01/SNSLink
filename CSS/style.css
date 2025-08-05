@@ -22,25 +22,26 @@ body::before {
   z-index: -1;
 }
 
+/* スマホ用CSS */
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 40px;
+  height: 20px;
   background-color: #000000;
   color: #FFFFFF;
   text-align: center;
-  font-size: 12px;
-  line-height: 40px;
+  font-size: 8px;
+  line-height: 20px;
 }
 
-/* スマホ用CSS */
-  h1 {
-    font-size: 15px;
-    margin: 0px auto 20px;
-    width: 300px;
-    text-align: center;
-  }
+
+h1 {
+  font-size: 15px;
+  margin: 0px auto 20px;
+  width: 300px;
+  text-align: center;
+}
 
 p,ul {
   text-align: center;
@@ -81,7 +82,7 @@ li {
 
 .box {
   width: 85%;
-  height: 580px;
+  height: 540px;
   border: none;
   background-color: rgba(255,255,255,0.6);
   text-align : center;
@@ -125,6 +126,18 @@ li {
 
 /* PC用CSS */
 @media all and (min-width: 1024px) {
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  line-height: 40px;
+}
+
 h1 {
   font-size: 20px;
   margin: 0px auto 20px;
